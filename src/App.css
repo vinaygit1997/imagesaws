@@ -1,38 +1,50 @@
-.App {
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff; /* Light blue background color */
+  margin: 0;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.image-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  gap: 20px; /* Adds gap between the cards */
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  background: #fffacd; /* Light yellow background color for the card */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px; /* Adds margin between the cards */
+  padding: 10px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image covers the box without stretching */
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow to the images */
+  border-radius: 4px; /* Optional: Adds slight rounding to image corners */
+  transition: transform 0.3s, box-shadow 0.3s; /* Adds smooth transition for hover effect */
+}
+
+.card img:hover {
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhances the shadow effect on hover */
 }
